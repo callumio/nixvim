@@ -8,8 +8,8 @@
       addFile = "<leader>ha";
       toggleQuickMenu = "<leader>he";
       navFile = {
-        "1" = "<C-s>";
-        "2" = "<C-d>";
+        "1" = "<C-a>";
+        "2" = "<C-s>";
         "3" = "<C-f>";
         "4" = "<C-g>";
       };
