@@ -16,6 +16,7 @@
     comment-nvim.enable = true;
     copilot-vim.enable = true;
     crates-nvim.enable = true;
+    fidget.enable = true;
     gitsigns.enable = true;
     leap.enable = true;
     nvim-autopairs.enable = true;
