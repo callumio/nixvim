@@ -29,6 +29,8 @@
     haskellPackages.haskell-language-server
     ghc
     haskellPackages.haskell-debug-adapter
+
+    lldb
   ];
 
 }
