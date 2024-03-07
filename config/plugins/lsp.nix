@@ -9,7 +9,21 @@
         lua-ls.enable = true;
         clangd.enable = true;
         pyright.enable = true;
-        tsserver.enable = true;
+        tsserver = {
+          enable = true;
+          filetypes =
+            [ "javascript" "javascriptreact" "typescript" "typescriptreact" ];
+          extraOptions.typescript.inlayHints = {
+            includeInlayEnumMemberValueHints = true;
+            includeInlayFunctionLikeReturnTypeHints = true;
+            includeInlayFunctionParameterTypeHints = true;
+            includeInlayParameterNameHints = "all";
+            includeInlayParameterNameHintsWhenArgumentMatchesName = true;
+            includeInlayPropertyDeclarationTypeHints = true;
+            includeInlayVariableTypeHints = true;
+            includeInlayVariableTypeHintsWhenTypeMatchesName = true;
+          };
+        };
         dockerls.enable = true;
       };
 
