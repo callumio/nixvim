@@ -10,6 +10,7 @@
     ./rust.nix
     ./telescope.nix
     ./treesitter.nix
+    ./presence.nix
   ];
   plugins = {
     comment-nvim.enable = true;
