@@ -8,12 +8,8 @@
     nvim-cmp = {
       enable = true;
       autoEnableSources = true;
-      sources = [
-        { name = "nvim_lsp"; }
-        { name = "copilot"; }
-        { name = "path"; }
-        { name = "luasnip"; }
-      ];
+      sources =
+        [{ name = "nvim_lsp"; } { name = "path"; } { name = "luasnip"; }];
       mapping = {
         "<CR>" = "cmp.mapping.confirm({ select = true })";
         "<C-Space>" = "cmp.mapping.complete({})";

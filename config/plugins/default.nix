@@ -1,4 +1,4 @@
-{ self, config, ... }: {
+{ self, config, pkgs, ... }: {
   imports = [
     ./cmp.nix
     ./dap.nix
@@ -13,12 +13,7 @@
   ];
   plugins = {
     comment-nvim.enable = true;
-    copilot-lua = {
-      enable = true;
-      suggestion.enabled = false;
-      panel.enabled = false;
-    };
-    copilot-cmp.enable = true;
+    copilot-vim.enable = true;
     crates-nvim.enable = true;
     gitsigns.enable = true;
     leap.enable = true;
@@ -28,4 +23,12 @@
     undotree.enable = true;
     nix.enable = true;
   };
+
+  extraPlugins = with pkgs.vimPlugins; [ nvim-web-devicons haskell-tools-nvim ];
+  extraPackages = with pkgs; [
+    haskellPackages.haskell-language-server
+    ghc
+    haskellPackages.haskell-debug-adapter
+  ];
+
 }
