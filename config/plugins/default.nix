@@ -13,7 +13,7 @@
     ./presence.nix
   ];
   plugins = {
-    comment-nvim.enable = true;
+    comment.enable = true;
     copilot-vim.enable = true;
     crates-nvim.enable = true;
     fidget.enable = true;
@@ -27,6 +27,7 @@
   };
 
   extraPlugins = with pkgs.vimPlugins; [ nvim-web-devicons haskell-tools-nvim ];
+
   extraPackages = with pkgs; [
     haskellPackages.haskell-language-server
     ghc

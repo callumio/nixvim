@@ -13,7 +13,7 @@
     viAlias = true;
     vimAlias = true;
 
-    options = {
+    opts = {
       mouse = "n";
 
       termguicolors = true;

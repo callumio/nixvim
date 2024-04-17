@@ -1,6 +1,6 @@
 {
   plugins.oil = {
     enable = true;
-    defaultFileExplorer = true;
+    settings = { defaultFileExplorer = true; };
   };
 }
