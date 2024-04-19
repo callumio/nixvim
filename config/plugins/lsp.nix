@@ -26,6 +26,7 @@
         };
         dockerls.enable = true;
         marksman.enable = true;
+        gleam.enable = true;
       };
 
       onAttach = ''
