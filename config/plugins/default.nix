@@ -16,7 +16,6 @@
   ];
   plugins = {
     comment.enable = true;
-    copilot-vim.enable = true;
     crates-nvim.enable = true;
     fidget.enable = true;
     gitsigns.enable = true;

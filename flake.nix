@@ -22,6 +22,7 @@
           nightly = import nixpkgs {
             inherit system;
             overlays = [ ];
+            config.allowUnfree = true;
           };
           nixvimModule = {
             inherit pkgs;
