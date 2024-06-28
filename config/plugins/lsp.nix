@@ -1,11 +1,10 @@
 {
   plugins = {
-    lsp-format.enable = true;
+    #lsp-format.enable = true;
     lsp = {
       enable = true;
-
       servers = {
-        rnix-lsp.enable = true;
+        nil-ls.enable = true;
         lua-ls.enable = true;
         clangd.enable = true;
         pyright.enable = true;
@@ -13,17 +12,31 @@
           enable = true;
           filetypes =
             [ "javascript" "javascriptreact" "typescript" "typescriptreact" ];
-          extraOptions.typescript.inlayHints = {
-            includeInlayEnumMemberValueHints = true;
-            includeInlayFunctionLikeReturnTypeHints = true;
-            includeInlayFunctionParameterTypeHints = true;
-            includeInlayParameterNameHints = "all";
-            includeInlayParameterNameHintsWhenArgumentMatchesName = true;
-            includeInlayPropertyDeclarationTypeHints = true;
-            includeInlayVariableTypeHints = true;
-            includeInlayVariableTypeHintsWhenTypeMatchesName = true;
+          extraOptions.settings = {
+            javascript.inlayHints = {
+              includeInlayEnumMemberValueHints = true;
+              includeInlayFunctionLikeReturnTypeHints = true;
+              includeInlayFunctionParameterTypeHints = true;
+              includeInlayParameterNameHints = "all";
+              includeInlayParameterNameHintsWhenArgumentMatchesName = true;
+              includeInlayPropertyDeclarationTypeHints = true;
+              includeInlayVariableTypeHints = true;
+              includeInlayVariableTypeHintsWhenTypeMatchesName = true;
+            };
+            typescript.inlayHints = {
+              includeInlayEnumMemberValueHints = true;
+              includeInlayFunctionLikeReturnTypeHints = true;
+              includeInlayFunctionParameterTypeHints = true;
+              includeInlayParameterNameHints = "all";
+              includeInlayParameterNameHintsWhenArgumentMatchesName = true;
+              includeInlayPropertyDeclarationTypeHints = true;
+              includeInlayVariableTypeHints = true;
+              includeInlayVariableTypeHintsWhenTypeMatchesName = true;
+            };
           };
         };
+        eslint.enable = true;
+        ruff-lsp.enable = true;
         dockerls.enable = true;
         marksman.enable = true;
         gleam.enable = true;

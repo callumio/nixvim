@@ -21,7 +21,7 @@
           nixvim' = nixvim.legacyPackages.${system};
           nightly = import nixpkgs {
             inherit system;
-            overlays = [ neovim-nightly-overlay.overlay ];
+            overlays = [ ];
           };
           nixvimModule = {
             inherit pkgs;
@@ -29,8 +29,7 @@
             extraSpecialArgs = { inherit nightly; };
           };
           nvim = nixvim'.makeNixvimWithModule nixvimModule;
-        in
-        {
+        in {
           checks = {
             default =
               nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;

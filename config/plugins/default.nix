@@ -11,6 +11,8 @@
     ./telescope.nix
     ./treesitter.nix
     ./presence.nix
+    ./conform.nix
+    ./lint.nix
   ];
   plugins = {
     comment.enable = true;
