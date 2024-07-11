@@ -1,4 +1,9 @@
-{ self, config, pkgs, ... }: {
+{
+  self,
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./cmp.nix
     ./dap.nix
@@ -27,7 +32,7 @@
     nix.enable = true;
   };
 
-  extraPlugins = with pkgs.vimPlugins; [ nvim-web-devicons haskell-tools-nvim ];
+  extraPlugins = with pkgs.vimPlugins; [nvim-web-devicons haskell-tools-nvim];
 
   extraPackages = with pkgs; [
     haskellPackages.haskell-language-server
@@ -35,6 +40,19 @@
     haskellPackages.haskell-debug-adapter
 
     lldb
-  ];
 
+    statix
+    python312Packages.flake8
+    black
+    alejandra
+    stylua
+    rustfmt
+    libclang
+    selene
+    nodePackages_latest.jsonlint
+    prettierd
+    nodePackages.prettier
+    eslint_d
+    nodePackages.eslint
+  ];
 }

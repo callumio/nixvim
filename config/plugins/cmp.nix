@@ -16,14 +16,13 @@
           "<C-j>" = "cmp.mapping.select_next_item()";
           "<C-k>" = "cmp.mapping.select_prev_item()";
           "<C-e>" = "cmp.mapping.close()";
-          "<S-CR>" =
-            "cmp.mapping.confirm({ behaviour = cmp.ConfirmBehavior.Replace, select = true })";
+          "<S-CR>" = "cmp.mapping.confirm({ behaviour = cmp.ConfirmBehavior.Replace, select = true })";
         };
         sources = [
-          { name = "nvim_lsp"; }
-          { name = "path"; }
-          { name = "luasnip"; }
-          { name = "cmdline"; }
+          {name = "nvim_lsp";}
+          {name = "path";}
+          {name = "luasnip";}
+          {name = "cmdline";}
         ];
         snippet.expand = ''
           function(args)

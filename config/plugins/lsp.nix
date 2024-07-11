@@ -10,8 +10,7 @@
         pyright.enable = true;
         tsserver = {
           enable = true;
-          filetypes =
-            [ "javascript" "javascriptreact" "typescript" "typescriptreact" ];
+          filetypes = ["javascript" "javascriptreact" "typescript" "typescriptreact"];
           extraOptions.settings = {
             javascript.inlayHints = {
               includeInlayEnumMemberValueHints = true;
@@ -65,7 +64,6 @@
           "vca" = "code_action";
           "<C-h>" = "signature_help";
         };
-
       };
     };
   };

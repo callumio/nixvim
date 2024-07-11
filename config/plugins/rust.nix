@@ -10,7 +10,7 @@
             end
           end
         '';
-        extraOptions = { inlay_hints = { highlight = "Comment"; }; };
+        extraOptions = {inlay_hints = {highlight = "Comment";};};
       };
     };
   };
