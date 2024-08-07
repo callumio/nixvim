@@ -20,20 +20,21 @@
         prettier = {
           enable = true;
           disableTsServerFormatter = false;
-          withArgs = ''
-            {
-              extra_args = { "--no-semi", "--single-quote"},
-            }
-          '';
+          settings = {
+            extra_args = [
+              "--no-semi"
+              "--single-quote"
+            ];
+          };
         };
         stylua.enable = true;
         black = {
           enable = true;
-          withArgs = ''
-            {
-              extra_args = { "--fast" },
-            }
-          '';
+          settings = {
+            extra_args = [
+              "--fast"
+            ];
+          };
         };
         clang_format.enable = true;
       };
