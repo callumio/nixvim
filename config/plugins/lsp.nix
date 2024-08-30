@@ -35,7 +35,7 @@
           };
         };
         eslint.enable = true;
-        ruff-lsp.enable = true;
+        #ruff-lsp.enable = true;
         dockerls.enable = true;
         marksman.enable = true;
         gleam.enable = true;
