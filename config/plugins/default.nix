@@ -53,6 +53,6 @@
     prettierd
     nodePackages.prettier
     eslint_d
-    nodePackages.eslint
+    eslint
   ];
 }
