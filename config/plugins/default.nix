@@ -35,24 +35,12 @@
   extraPlugins = with pkgs.vimPlugins; [nvim-web-devicons haskell-tools-nvim];
 
   extraPackages = with pkgs; [
-    haskellPackages.haskell-language-server
+    # hsakell tools
     ghc
+    haskellPackages.haskell-language-server
     haskellPackages.haskell-debug-adapter
 
+    # dap and rust-tools
     lldb
-
-    statix
-    python312Packages.flake8
-    black
-    alejandra
-    stylua
-    rustfmt
-    libclang
-    selene
-    nodePackages_latest.jsonlint
-    prettierd
-    nodePackages.prettier
-    eslint_d
-    eslint
   ];
 }

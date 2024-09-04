@@ -1,4 +1,21 @@
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  extraPackages = map (let
+    mapping = with pkgs; {
+      clang-format = libclang;
+      inherit (nodePackages) prettier;
+    };
+  in
+    pkg:
+      if lib.hasAttr pkg mapping
+      then mapping.${pkg}
+      else pkgs.${pkg})
+  (lib.flatten (lib.attrValues config.plugins.conform-nvim.settings.formatters_by_ft));
+
   plugins.conform-nvim = {
     enable = true;
     settings = {

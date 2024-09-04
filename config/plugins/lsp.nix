@@ -4,7 +4,17 @@
     lsp = {
       enable = true;
       servers = {
-        nil-ls.enable = true;
+        nil-ls = {
+          enable = true;
+          settings.nix = {
+            maxMemoryMB = null;
+            flake = {
+              autoEvalInputs = true;
+              autoArchive = true;
+            };
+          };
+        };
+
         lua-ls.enable = true;
         clangd.enable = true;
         pyright.enable = true;
@@ -35,7 +45,7 @@
           };
         };
         eslint.enable = true;
-        #ruff-lsp.enable = true;
+        ruff-lsp.enable = true;
         dockerls.enable = true;
         marksman.enable = true;
         gleam.enable = true;
