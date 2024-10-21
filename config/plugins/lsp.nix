@@ -4,7 +4,7 @@
     lsp = {
       enable = true;
       servers = {
-        nil-ls = {
+        nil_ls = {
           enable = true;
           settings.nix = {
             maxMemoryMB = null;
@@ -15,10 +15,10 @@
           };
         };
 
-        lua-ls.enable = true;
+        lua_ls.enable = true;
         clangd.enable = true;
         pyright.enable = true;
-        tsserver = {
+        ts_ls = {
           enable = true;
           filetypes = ["javascript" "javascriptreact" "typescript" "typescriptreact"];
           extraOptions.settings = {
@@ -45,7 +45,7 @@
           };
         };
         eslint.enable = true;
-        ruff-lsp.enable = true;
+        ruff_lsp.enable = true;
         dockerls.enable = true;
         marksman.enable = true;
         gleam.enable = true;

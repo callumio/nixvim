@@ -26,13 +26,14 @@
     gitsigns.enable = true;
     leap.enable = true;
     nvim-autopairs.enable = true;
-    surround.enable = true;
+    vim-surround.enable = true;
     todo-comments.enable = true;
     undotree.enable = true;
     nix.enable = true;
+    web-devicons.enable = true;
   };
 
-  extraPlugins = with pkgs.vimPlugins; [nvim-web-devicons haskell-tools-nvim];
+  extraPlugins = with pkgs.vimPlugins; [haskell-tools-nvim];
 
   extraPackages = with pkgs; [
     # hsakell tools
