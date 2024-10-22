@@ -23,7 +23,7 @@
       markdownlint = ["markdownlint-cli2"];
       nix = ["deadnix" "nix" "statix"];
       lua = ["selene"];
-      sh = ["shellcheck" "shellharden"];
+      sh = ["shellcheck"];
       python = ["ruff"];
       javascript = ["eslint_d"];
       javascriptreact = ["eslint_d"];
