@@ -2,17 +2,20 @@
   plugins.lualine = {
     enable = true;
     settings = {
-      componentSeparators = {
-        left = "|";
-        right = "|";
+      options = {
+        componentSeparators = {
+          left = "|";
+          right = "|";
+        };
+
+        sectionSeparators = {
+          left = "";
+          right = "";
+        };
       };
 
-      sectionSeparators = {
-        left = "";
-        right = "";
-      };
-
-      sections = {lualine_a = [{name = "buffers";}];};
+      #sections = {lualine_a = [{name = "buffers";}];};
+      sections = {lualine_a = [{}];};
     };
   };
 }
